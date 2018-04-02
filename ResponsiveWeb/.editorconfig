@@ -1,0 +1,16 @@
+#editorconfig.org
+
+root = ture  #最顶层的配置文件，发现设为true时，才会停止查找其他.editorconfig文件
+
+[*]  #所有文件应用此规则
+charset = utf-8   #网站的编码
+indent_size = 4  #缩减尺寸
+indent_style = space #使用空格来缩进
+insert_final_newline = true  #文件以一个空白行结尾
+trim_trailing_whitespace = true  #行尾空格自动删除
+
+[*.md]   #对所有md文件适用的规则
+
+trim_trailing_whitespace = false
+
+
