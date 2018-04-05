@@ -1,1 +1,156 @@
 /* 通用样式文件 */
+
+/***************
+ *页面样式
+ **************/
+
+
+
+
+/****************************
+基本默认值:
+*****************************/
+html {
+    font-size: 62.5%;
+    color:#222
+}
+
+/* 选择文字的背景颜色和阴影 */
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+
+}
+
+/* 设置无序列表的样式
+ul的margin和padding:清空
+li的list-style也就是前面的小圆点去掉
+*/
+
+ul {
+    margin: 0;
+    padding:0;
+}
+li {
+    list-style: none;
+}
+
+/***************************************
+*工具样式
+
+ !important表示优先级最高
+*****************************************/
+
+/* 父元素居中显示 */
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 元素的浮动 */
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+/* 文本对齐 */
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/*生成的框的类型
+none->不显示
+block->显示为块级元素，此元素前后会带有换行符
+*/
+
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+
+/*  visibility: hidden->元素隐藏,但是在网页中该占的位置还是占着
+    display: none ->元素的显示设为无，即在网页中不占任何的位置
+*/
+
+.invisible {
+    visibility: hidden;
+}
+
+/*隐藏文本*/
+.text-hide {
+    font:0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border:0;
+}
+
+/*清除浮动  */
+.clearfix:before,
+.clrarfix:after{
+    content:" ";
+    display: table;
+}
+
+.clearfix:after {
+    clear:both;
+}
+
+
+
+/* 笔记 */
+
+ /* px em rem
+
+  1
+  -px 表示一个像素
+
+  - em 相对长度单位,相对参照物的父元素 font-size ,
+  具有继承特点,如果默认没有设置font-size,浏览器会有一个默认的em设置,1em = 16px,因为依赖参考父元素,所以容易造成页面混乱
+
+  rem 也是相对长度单位,参照物为根元素的html,相对于参照固定不变,当没有设置font-size时候, 1rem = 16px;
+
+  2
+  font-size:62.5%   1rem = 10px  (10/16*100%) 如果设置font-size=100% 1rem=16px
+  rem相对于em相对安全,是因为它总是参照html,不与父元素相关
+
+  3
+  rem不支持ie8以下的,如果要兼容,可以在rem下面设置font-size=16px;
+
+  案例:
+  .rem p{
+    font-size:16px;
+    font-size:1rem;
+    margin-top:1rem;
+  }
+
+
+  清除浮动,触发css的BFC功能;
+
+  /* .container {
+    float: left;
+    overflow:auto;
+    display: table-cell;
+    display: table-caption;
+    display: inline-block;
+    position: fixed;
+    position: absolute;
+    background-color: #cccccc;
+} */
+
+
+ */
