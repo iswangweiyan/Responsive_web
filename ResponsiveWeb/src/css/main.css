@@ -4,22 +4,20 @@
  *页面样式
  **************/
 
-
-
-
 /****************************
 基本默认值:
 *****************************/
+
 html {
     font-size: 62.5%;
-    color:#222
+    color: #222
 }
 
 /* 选择文字的背景颜色和阴影 */
+
 ::selection {
     background-color: #b3d4fc;
     text-shadow: none;
-
 }
 
 /* 设置无序列表的样式
@@ -29,8 +27,9 @@ li的list-style也就是前面的小圆点去掉
 
 ul {
     margin: 0;
-    padding:0;
+    padding: 0;
 }
+
 li {
     list-style: none;
 }
@@ -42,6 +41,7 @@ li {
 *****************************************/
 
 /* 父元素居中显示 */
+
 .center-block {
     display: block;
     margin-right: auto;
@@ -49,6 +49,7 @@ li {
 }
 
 /* 元素的浮动 */
+
 .pull-right {
     float: right !important;
 }
@@ -58,6 +59,7 @@ li {
 }
 
 /* 文本对齐 */
+
 .text-right {
     text-align: right !important;
 }
@@ -78,6 +80,7 @@ block->显示为块级元素，此元素前后会带有换行符
 .hide {
     display: none !important;
 }
+
 .show {
     display: block !important;
 }
@@ -91,30 +94,249 @@ block->显示为块级元素，此元素前后会带有换行符
 }
 
 /*隐藏文本*/
+
 .text-hide {
-    font:0/0 a;
+    font: 0/0 a;
     color: transparent;
     text-shadow: none;
     background-color: transparent;
-    border:0;
+    border: 0;
 }
 
 /*清除浮动  */
+
 .clearfix:before,
-.clrarfix:after{
-    content:" ";
+.clrarfix:after {
+    content: " ";
     display: table;
 }
 
 .clearfix:after {
-    clear:both;
+    clear: both;
 }
+
+/***
+浏览器更新提示样式
+**/
+
+.browserupgrade {
+    margin: 0;
+    padding: 1rem;
+    background: #ccc
+}
+
+/**********************
+自定义页面样式
+
+line-height: 指的是行间距，一般在1.5-1.8之间,
+text-decoration 表示元素的文本修饰,underline表示下划线
+************************/
+
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #0ae;
+    text-decoration: underline;
+}
+
+/*网站头部*/
+
+header {
+    width: 100%;
+}
+
+/*如果要精确显示line-height 建议使用px而不是 em,因为在中文chrome会有一个12px的下限*/
+
+header .top {
+    line-height: 30px;
+    padding: 0 1.5rem;
+    color: #fff;
+    background: #555;
+    border-bottom: 1px #ecc000 solid;
+}
+
+header .top .tel {
+    float: left;
+}
+
+header .top ul {
+    text-align: right;
+}
+
+header .top ul li {
+    display: inline-block;
+}
+
+/*
+- header .top ul li + li表示除了第一个li以外,后面的所有li元素,为其添加左边框
+- margin-left: -3px;设置负边距去掉换行产生的空格px
+*/
+
+header .top ul li+li {
+    border-left: 1px solid #999;
+    margin-left: -3px;
+}
+
+/*设置 a元素为 display: inline-block是因为它本身默认是inline元素,如果不设置,后面设置的padding或宽高属性都无效 */
+
+header .top ul li a {
+    display: inline-block;
+    padding: 0 1.5rem;
+    color: #fff;
+}
+
+/*主导航*/
+
+header .main {
+    padding: 0;
+}
+
+header .main .brand {
+    float: left;
+    padding: 1rem 1.5rem;
+}
+
+header .main ul {
+    text-align: right;
+}
+
+header .main ul li {
+    display: inline-block;
+    border-left: 1px solid #f0ede9;
+}
+
+header .main ul li a {
+    display: inline-block;
+    padding: 0 3rem;
+    line-height: 5.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7c7a65;
+    text-decoration: none;
+}
+
+header .main ul li a:hover,
+header .main ul li a:active,
+header .main ul li a.active {
+    color: #ffb300;
+    background-color: #f8f6f1;
+}
+
+/*网站主要内容*/
+
+.container {
+    width: 100%;
+}
+
+/*网站底部导航*/
+
+footer {
+    width: 100%;
+    padding: 3rem 0 5rem;
+    background: #ededed;
+}
+
+footer {
+    text-align: center;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li .icon {
+    display: inline-block;
+    text-indent: -999rem;/*隐藏文字*/
+    margin-right: 1.5rem;
+    background: url(https://i.alipayobjects.com/e/201307/jebmKcbrh.png) no-repeat;
+    background-size: 466px 447px;
+
+    overflow: hidden;
+}
+
+footer ul li .icon-zfywxkz {
+    width:38px;
+    height:27px;
+    background-position: -369px -45px;
+}
+
+footer ul li .icon-pci {
+
+    width: 78px;
+    height: 27px;
+    background-position: -110px -90px;
+}
+
+footer ul li .icon-visayz {
+    width:36px;
+    height:27px;
+    background-position: -426px -90px;
+}
+
+
+
+footer ul li .icon-vsjmfw {
+    width: 63px;
+    height: 27px;
+    margin-right: 13px;
+    background-position: -401px -186px;
+}
+
+
+footer ul li .icon-wlgs {
+    width:22px;
+    height: 27px;
+    background-position: -48px -48px;
+
+}
+
+
+footer ul li .icon-rzcx {
+    width: 75px;
+    height: 27px;
+    background-position: 0 -320px;
+
+}
+
+
+footer ul li .icon-gs {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    background: url(https://os.alipayobjects.com/rmsportal/lybcjqloSPjMAFg.png) no-repeat;
+    background-size: 30px;
+
+
+}
+
+footer p{
+    text-align:center;
+    color:#999;
+
+}
+
+
+
+
+
+
+
 
 
 
 /* 笔记 */
 
- /* px em rem
+/* px em rem
 
   1
   -px 表示一个像素
@@ -151,6 +373,3 @@ block->显示为块级元素，此元素前后会带有换行符
     position: absolute;
     background-color: #cccccc;
 } */
-
-
-
